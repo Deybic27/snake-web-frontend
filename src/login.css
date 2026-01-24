@@ -1,0 +1,148 @@
+.containerLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerLoginTitle {
+    position: absolute;
+}
+
+.containerLoginTitle1 {
+    left: 5%;
+}
+
+.containerLoginTitle2 {
+    right: 5%;
+}
+
+.contentLogin {
+  width: 469px;
+  height: 438px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2% 2% 5% 2%;
+  border-radius: 25px;
+}
+
+.form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formButtons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formBtn {
+  width: 50%;
+  padding: 3px 50px;
+  cursor: pointer;
+  font-size: 27px;
+  text-align: center;
+  font-family: var(--fontFamily);
+}
+
+.formBtn1 {
+  border: 1px solid var(--black);
+  border-top-left-radius: 25px;
+}
+
+.formBtn2 {
+  border: 1px solid var(--black);
+  border-top-right-radius: 25px;
+}
+
+.formContainer {
+  width: 100%;
+  height: 80%;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: var(--purple);
+}
+
+.formContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 13%;
+}
+
+.formContentInfo {
+  width: 90%;
+  height: 100%;
+  max-width: 500px;
+  margin-top: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.formContentLabels {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.formContentInputs {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.formContentBtn {
+  height: 100%;
+}
+
+@media (min-width: 1200px) {
+  .containerLoginTitle1 {
+    left: 5%;
+  }
+  .containerLoginTitle2 {
+    right: 5%;
+  }
+}
+
+@media (min-width: 1410px) {
+  .containerLoginTitle1 {
+    left: 10%;
+  }
+  .containerLoginTitle2 {
+    right: 11%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .containerLoginTitle1 {
+    left: 7%;
+  }
+  .containerLoginTitle2 {
+    right: 7%;
+  }
+}
+
+@media (min-width: 1700px) {
+  .containerLoginTitle1 {
+    left: 11%;
+  }
+}

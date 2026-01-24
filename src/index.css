@@ -39,12 +39,12 @@ body {
 }
 
 h1 {
-  font-size: 100px;
+  font-size: 68px;
 }
 
 h2 {
-  font-size: 40px;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
+  font-size: 35px;
 }
 
 .bgOrange {
@@ -55,11 +55,11 @@ h2 {
 /* BUTTONS */
 .btn {
   min-width: 100px;
-  padding: 2px 93px;
+  padding: 2px 63px;
   border: 0;
   border-radius: 25px;
   cursor: pointer;
-  font-size: 27px;
+  font-size: 22px;
   font-family: var(--fontFamily);
 }
 
@@ -90,13 +90,13 @@ h2 {
 /* FORMS */
 
 .formLabel {
-  font-size: 24px;
+  font-size: 20px;
   color: var(--white);
 }
 
 .formInput {
   width: 90%;
-  padding: 6px 17px;
+  padding: 6px 7px;
   border: 0;
   border-radius: 25px;
   outline: none;
@@ -109,6 +109,42 @@ h2 {
 .formInput::placeholder {
   color: var(--purple);
   font-size: 18px;
+}
+
+@media (min-width: 480px) {
+  h1 {
+    font-size: 84px;
+  }
+}
+
+@media (min-width: 1024px) {
+  h2 {
+    margin-bottom: 24px;
+    font-size: 40px;
+  }
+
+  .btn {
+    padding: 2px 93px;
+    font-size: 27px;
+  }
+
+  .formLabel {
+    font-size: 22px;
+  }
+
+  .formInput {
+    padding: 6px 17px;
+  }
+}
+
+@media (min-width: 1280px) {
+  h2 {
+    font-size: 40px;
+  }
+
+  .formLabel {
+    font-size: 24px;
+  }
 }
 
 @media (min-width: 1600px) {

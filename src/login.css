@@ -1,35 +1,41 @@
 .containerLogin {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
 }
 
 .containerLoginTitle {
-    position: absolute;
-    top: 2%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
 
 .containerLoginTitle1 {
-    left: 5%;
+  top: 2%;
 }
 
 .containerLoginTitle2 {
-    right: 5%;
+  top: 12%;
+  right: 5%;
 }
 
 .contentLogin {
-  width: 85%;
-  height: 338px;
+  width: 80%;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 2% 2% 5% 2%;
+  padding: 31px 20px;
+  margin-top: 64%;
+  margin-bottom: 10%;
   border-radius: 25px;
 }
 
 .form {
-  width: 100%;
+  width: 95%;
   height: 100%;
   display: flex;
   justify-content: flex-start;
@@ -65,7 +71,7 @@
 
 .formContainer {
   width: 100%;
-  height: 80%;
+  height: 100%;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   background-color: var(--purple);
@@ -75,53 +81,84 @@
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  gap: 13%;
+  gap: 30px;
 }
 
 .formContentInfo {
   width: 95%;
   height: 100%;
   max-width: 500px;
-  margin-top: 7%;
+  margin-top: 3%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   gap: 10px;
 }
 
-.formContentLabels {
-  width: 30%;
+.formContentInputs {
+  width: 95%;
+  height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
-  gap: 30px;
-}
-
-.formContentInputs {
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 30px;
+  gap: 5px;
 }
 
 .formContentBtn {
   height: 100%;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 345px) {
+  .contentLogin {
+    margin-top: 54%;
+  }
 }
 
 @media (min-width: 480px) {
+  .containerLogin {
+    justify-content: center;
+    align-items: center;
+  }
   .containerLoginTitle {
     top: 3%;
+    transform: none;
+  }
+
+  .containerLoginTitle1 {
+    left: 3%;
+  }
+
+  .containerLoginTitle2 {
+    left: auto;
   }
 
   .contentLogin {
-    width: 369px;
+    width: 70%;
+    min-height: 377px;
+    margin-top: 26%;
+    margin-bottom: 2%;
+  }
+
+  .formBtn {
+    font-size: 32px;
+  }
+
+  .formContent {
+    gap: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contentLogin {
+    width: 55%;
+    margin-top: 12%;
+    padding: 43px 20px;
   }
 }
 
@@ -135,21 +172,21 @@
   }
 
   .contentLogin {
-    width: 431px;
-    height: 425px;
-  }
-  
-  .formBtn {
-    font-size: 27px;
+    width: 479px;
+    min-height: auto;
+    margin-top: 2%;
   }
 
   .formContentInfo {
-    width: 90%;
-    margin-top: 10%;
+    width: 92%;
+    margin-top: 7%;
+    gap: 17px;
   }
 
   .formContentInputs {
-    width: 70%;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
   }
 }
 
@@ -159,8 +196,8 @@
   }
 
   .contentLogin {
-    width: 469px;
-    height: 438px;
+    width: 480px;
+    height: fit-content;
   }
 }
 

@@ -34,28 +34,34 @@ body {
 
 .container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--white);
 }
 
 h1 {
-  font-size: 68px;
+  font-size: 84px;
 }
 
 h2 {
-  margin-bottom: 10px;
-  font-size: 35px;
+  margin-bottom: 20px;
+  font-size: 24px;
 }
 
 .bgOrange {
   background-color: var(--orange);
 }
 
+/*HIDDEN*/
+
+.hidden {
+  display: none !important;
+}
+
 
 /* BUTTONS */
 .btn {
   min-width: 100px;
-  padding: 2px 63px;
+  padding: 6px 63px;
   border: 0;
   border-radius: 25px;
   cursor: pointer;
@@ -95,7 +101,7 @@ h2 {
 }
 
 .formInput {
-  width: 90%;
+  width: 95%;
   padding: 6px 7px;
   border: 0;
   border-radius: 25px;
@@ -108,23 +114,23 @@ h2 {
 
 .formInput::placeholder {
   color: var(--purple);
-  font-size: 18px;
+  font-size: 20px;
+  opacity: 1;
 }
 
 @media (min-width: 480px) {
-  h1 {
-    font-size: 84px;
+  h2 {
+    font-size: 32px;
   }
 }
 
 @media (min-width: 1024px) {
   h2 {
     margin-bottom: 24px;
-    font-size: 40px;
   }
 
   .btn {
-    padding: 2px 93px;
+    padding: 6px 93px;
     font-size: 27px;
   }
 
@@ -133,16 +139,27 @@ h2 {
   }
 
   .formInput {
+    width: 90%;
+    max-width: 238px;
     padding: 6px 17px;
+    font-size: 22px;
+  }
+
+  .formInput::placeholder {
+    font-size: 22px;
   }
 }
 
 @media (min-width: 1280px) {
-  h2 {
-    font-size: 40px;
+  .formLabel {
+    font-size: 24px;
   }
 
-  .formLabel {
+  .formInput {
+    font-size: 24px;
+  }
+
+  .formInput::placeholder {
     font-size: 24px;
   }
 }

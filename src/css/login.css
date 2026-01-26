@@ -91,21 +91,27 @@
   width: 95%;
   height: 100%;
   max-width: 500px;
-  margin-top: 3%;
+  margin-top: 6%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 19px;
 }
 
 .formContentInputs {
   width: 95%;
   height: 100%;
-  display: flex;
+  /*display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-direction: column;
+  flex-direction: column;*/
+  display: grid;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 2fr;
   gap: 5px;
 }
 
@@ -186,7 +192,7 @@
   .formContentInputs {
     width: 100%;
     align-items: center;
-    flex-direction: row;
+    /*flex-direction: row;*/
   }
 }
 

@@ -102,16 +102,10 @@
 .formContentInputs {
   width: 95%;
   height: 100%;
-  /*display: flex;
-  justify-content: space-between;
+  display: flex;
+  justify-content: center;
   align-items: flex-start;
-  flex-direction: column;*/
-  display: grid;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
-  grid-template-columns: 0.5fr 1fr;
-  grid-template-rows: 2fr;
+  flex-direction: column;
   gap: 5px;
 }
 
@@ -131,13 +125,14 @@
     justify-content: center;
     align-items: center;
   }
+
   .containerLoginTitle {
     top: 3%;
     transform: none;
   }
 
   .containerLoginTitle1 {
-    left: 3%;
+    left: 2%;
   }
 
   .containerLoginTitle2 {
@@ -148,7 +143,7 @@
     width: 70%;
     min-height: 377px;
     margin-top: 26%;
-    margin-bottom: 2%;
+    margin-bottom: 6%;
   }
 
   .formBtn {
@@ -165,6 +160,15 @@
     width: 55%;
     margin-top: 12%;
     padding: 43px 20px;
+  }
+
+  .formContentInputs {
+    display: grid;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 2fr;
   }
 }
 
@@ -192,7 +196,6 @@
   .formContentInputs {
     width: 100%;
     align-items: center;
-    /*flex-direction: row;*/
   }
 }
 

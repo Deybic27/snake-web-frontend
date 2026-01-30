@@ -1,7 +1,10 @@
 import { useState } from "react"
 import { useForm } from "react-hook-form"
+import { useNavigate } from "react-router-dom"
 
 function Login() {
+
+  const navigate = useNavigate();
 
   const {
     register,
@@ -47,7 +50,7 @@ function Login() {
         return;
       }
       if(result.message == 'User logged in successfully'){
-        console.log('USUARIO LOGUEADO: ', result);
+        navigate("/welcome");
       }
     })
     .catch(error => {
@@ -59,7 +62,16 @@ function Login() {
   }
 
   return (
-    <form className="formContent" onSubmit={handleSubmit(validar)}>
+    <form className="formContent"
+      onSubmit={
+        handleSubmit(validar)
+      }
+      onKeyDown={(e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+        }
+      }}
+    >
       <div className="formContentInfo">
         {/*LABEL - INPUT*/}
         <div className="formContentInputs">

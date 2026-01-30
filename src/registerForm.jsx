@@ -1,7 +1,10 @@
 import { useState } from "react"
 import { useForm } from "react-hook-form"
+import { useNavigate } from "react-router-dom"
 
 function Register() {
+
+  const navigate = useNavigate();
 
   const patterns = {
     username: /^[A-Za-z0-9._]+$/,
@@ -68,7 +71,7 @@ function Register() {
     fetch(url, requestOptions)
     .then(response => response.json())
     .then(result => {
-      if(result.message == 'The username has already been taken.'){
+      if(result.errors?.username == 'User already exist.'){
         setApiError("El usuario ya se encuentra registrado");
         return;
       }
@@ -76,12 +79,12 @@ function Register() {
         setApiError("Las contraseñas no coinciden");
         return;
       }
-      if(result.message == 'The email has already been taken.'){
+      if(result.errors?.email == 'Email already exist.'){
         setApiError("El correo ya se encuentra registrado");
         return;
       }
       if(result.message == 'User registered successfully'){
-        console.log('REGISTRADO', result);
+        navigate("/welcome");
       }
     })
     .catch(error => {
@@ -91,7 +94,16 @@ function Register() {
   }
 
   return (
-    <form className="formContent formContentReg" onSubmit={handleSubmit(registrar)}>
+    <form className="formContent formContentReg"
+      onSubmit={
+        handleSubmit(registrar)
+      }
+      onKeyDown={(e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+        }
+      }}
+    >
       <div className="formContentInfo">
         {/*LABEL - INPUT*/}
         <div className="formContentInputs">

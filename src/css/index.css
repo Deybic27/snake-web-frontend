@@ -96,6 +96,7 @@ h2 {
 /* FORMS */
 
 .formLabel {
+  line-height: 21px;
   font-size: 16px;
   color: var(--white);
 }
